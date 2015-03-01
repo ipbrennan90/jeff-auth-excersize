@@ -7,6 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if flash[:notice] %>
+    <%= flash[:notice] %>
+  <% end %>
+
+
+
+  <%if current_user %>
+    <%= link_to "sign me out!", sign_out_path %>
+  <% else %>
+  <%= link_to "sign me in", sign_in_path %>
+  <% end %>
+
+
+
+
 
 <%= yield %>
 
