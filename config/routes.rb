@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   post 'sign-up', to: 'registration#create'
   get 'sign-in', to: 'authentication#new'
   post 'sign-in', to: 'authentication#create'
-  get 'sign-out', to: 'authenticaton#destroy'
+  get 'sign-out', to: 'authentication#destroy'
 end
